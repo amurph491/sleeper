@@ -1,8 +1,15 @@
 extends layout
 
 block content
-	h1= title
-	form#formAddUser(name="adduser",method="post",action="/adduser")
-		input#inputUserName(type="text", placeholder="username", name="username")
-		input#inputUserEmail(type="text", placeholder="useremail",name="useremail")
-		button#btnSubmit(type="submit") submit
+	div(class="container")
+		h1= title
+		form#formAddUser(name="adduser",method="post",action="adduser")
+			div(class="form-group")
+				input#inputUserName(type="text", class="form-control", placeholder="username", name="username")
+			div(class="form-group")
+				input#inputUserEmail(type="text", class="form-control", placeholder="email",name="useremail")
+			div(class="form-group")
+				input#inputUserPassword(type="password", class="form-control", placeholder="password",name="userpass")
+			div(class="form-group")
+				button#btnSubmit(type="submit" class="btn btn-default") submit
+		
