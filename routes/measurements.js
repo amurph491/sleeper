@@ -28,14 +28,23 @@ router.get('/:nid/up', function(req, res) {
 	res.send();
 });
 
+router.get('/serve/:nid', function(req, res) {
+	var db = req.db;
+	var collection = db.get('nightcollection');
+	var nid = req.param("nid");
+
+	collection.findById(nid, function(err, doc){
+		res.send(doc);
+	});
+});
+
 router.get('/:nid/view', function(req, res) {
 	var db = req.db;
 	var collection = db.get('nightcollection');
 
 	var nid = req.param("nid");
-	console.log(nid);
+
 	collection.findById(nid, function(err, doc) {
-		console.log(doc);
 		res.render('viewmeasure', { title: 'View Measurement', doc: doc});
 	})
 });

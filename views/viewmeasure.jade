@@ -1,11 +1,16 @@
 extends layout
 
 block content
+	script(src="/javascripts/timechart.js")
 	h1= title
 	u1
 		each meas, i in doc.measurements
-			p= "Timestamp: " + meas.timestamp
-			ul
-				li= "temperature: " + meas.temp
-				li= "light level: " + meas.light
-				li= "sound level: " + meas.sound
+			if meas
+				p= "Timestamp: " + meas.timestamp
+				ul
+					li= "temperature: " + meas.temp
+					li= "light level: " + meas.light
+					li= "sound level: " + meas.sound
+	#container
+
+
