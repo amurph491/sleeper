@@ -7,7 +7,6 @@ router.get('/:nid/up', function(req, res) {
 	var collection = db.get('nightcollection');
 	var nid = req.param("nid");
 
-	console.log(nid);
 	if(nid){
 		var t = new Date().getTime();
 		var temp = req.query.temp;
