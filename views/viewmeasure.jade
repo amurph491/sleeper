@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	script(src="/javascripts/timechart.js")
+	script(src="/javascripts/testchart.js")
 	h1= title
 	u1
 		each meas, i in doc.measurements
@@ -11,6 +11,6 @@ block content
 					li= "temperature: " + meas.temp
 					li= "light level: " + meas.light
 					li= "sound level: " + meas.sound
-	#container
-
+	#container_temp
+	#container_sound
 
