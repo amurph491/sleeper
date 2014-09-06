@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     var pathname = window.location.pathname;
-    var nid = pathname.slice(4,24);
+    var nid = pathname.slice(3,27);
     console.log(pathname);
     console.log(nid);
 
