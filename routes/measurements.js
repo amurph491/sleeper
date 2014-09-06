@@ -27,7 +27,7 @@ router.get('/:nid/up', function(req, res) {
 	res.send();
 });
 
-router.get('/serve/:nid', function(req, res) {
+router.get('/:nid/s', function(req, res) {
 	var db = req.db;
 	var collection = db.get('nightcollection');
 	var nid = req.param("nid");
