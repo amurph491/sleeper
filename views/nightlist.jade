@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1.
+		Measurement List
+	ul
+		each night, i in nightlist
+			li
+				a(href="m/#{night._id}/view")= night._id
