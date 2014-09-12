@@ -1,8 +1,12 @@
 extends layout
 
 block content
+	script.data(type='text/javascript').
+		var ldoc = !{JSON.stringify(doc)}
 	script(src="/javascripts/testchart.js")
 	h1= title
+	#container_temp
+	#container_sound
 	u1
 		each meas, i in doc.measurements
 			if meas
@@ -11,6 +15,3 @@ block content
 					li= "temperature: " + meas.temp
 					li= "light level: " + meas.light
 					li= "sound level: " + meas.sound
-	#container_temp
-	#container_sound
-

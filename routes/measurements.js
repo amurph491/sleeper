@@ -54,6 +54,7 @@ router.get('/:nid/view', function(req, res) {
 	var nid = req.param("nid");
 
 	collection.findById(nid, function(err, doc) {
+		console.log("doc=" + doc)
 		res.render('viewmeasure', { title: 'View Measurement', doc: doc});
 	})
 });
